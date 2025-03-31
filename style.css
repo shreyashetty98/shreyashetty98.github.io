@@ -1,64 +1,79 @@
-/* styles.css */
-
-/* General Styles */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+html, body {
+    height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    padding: 0;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
-/* Center Container */
+/* Center content in the middle of the page */
 .container {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Logo */
+/* Style for the logo */
 .logo {
     max-width: 272px;
-}
-
-/* Search Bar */
-.search-bar-container {
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
+/* Styles for the search bar */
 .search-bar {
-    width: 100%;
-    padding: 10px 15px;
-    font-size: 18px;
+    width: 700px; /* Increased width for a larger search bar */
+    padding: 20px 24px;
     border: 1px solid #dfe1e5;
-    outline: none;
-    transition: box-shadow 0.2s ease-in-out;
+    font-size: 16px; /* Optional: Adjust font size if needed */
+    border-radius: 10px; /* Rounded corners */
 }
 
-.search-bar:focus {
-    box-shadow: 0px 0px 5px rgba(0, 0, 255, 0.5);
-}
-
-/* Search Buttons */
-.search-buttons-container {
-    margin-top: 20px;
-}
-
-.search-buttons-container button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-/* Responsive */
-@media (max-width: 576px) {
+/* Ensures the search bar is full width on small screens */
+@media (max-width: 575.98px) {
     .search-bar {
-        font-size: 16px;
+        width: calc(100% - 48px); /* Account for padding */
+    }
+}
+
+/* Styles for the search buttons */
+.search-buttons-container button {
+    padding: 10px 24px;
+    font-size: 0.875rem;
+    margin: 2px;
+}
+
+/* On smaller screens, adjust button size and stack them vertically */
+@media (max-width: 575.98px) {
+    .search-buttons-container {
+        flex-direction: column;
     }
 
     .search-buttons-container button {
-        font-size: 14px;
+        width: 100%;
+        margin: 5px 0;
     }
+}
+
+/* Adjust the search bar and buttons sizing for medium screens */
+@media (min-width: 576px) and (max-width: 768px) {
+    .search-bar {
+        width: 100%; /* Adjust the width on medium devices */
+    }
+
+    .search-buttons-container button {
+        padding: 10px 20px; /* Adjust padding */
+    }
+}
+
+/* Further adjustments for larger screens */
+@media (min-width: 769px) {
+    .search-bar {
+        width: 100%; /* Adjust the width on larger devices */
+        align-items: center;
+    }
+    
 }
