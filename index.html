@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreya Shetty - Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-12 text-center">
+                <img class="logo mb-4" src="images/logo.png" alt="Google Logo" style="max-width: 272px;">
+                <div class="search-bar-container">
+                    <input type="text" id="search-bar" class="form-control-lg search-bar rounded-pill" placeholder="Search Portfolio" value="Shreya Karunakar Shetty">
+                </div>
+                <div class="search-buttons-container mt-3">
+                    <button id="search-button" type="button" class="btn btn-outline-primary rounded mr-2">Google Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("search-button").addEventListener("click", function() {
+            window.location.href = "search-results.html";
+        });
+    </script>
+</body>
+</html>
